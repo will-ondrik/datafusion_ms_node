@@ -1,0 +1,22 @@
+{
+  "name": "datafusion_ms_node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.10.6",
+    "lighthouse": "^12.3.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "chrome-launcher": "^1.1.2",
+    "dotenv": "^16.4.7"
+  }
+}
