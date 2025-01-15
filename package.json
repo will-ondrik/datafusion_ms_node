@@ -2,7 +2,11 @@
   "name": "datafusion_ms_node",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,6 +21,8 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "chrome-launcher": "^1.1.2",
-    "dotenv": "^16.4.7"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
   }
 }
