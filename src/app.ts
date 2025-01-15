@@ -21,6 +21,8 @@ class App {
 
     private initializeMiddlewares(): void {
         this.app.use(cors());
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: true }));
     }
 
     private initializeControllers(): void {
