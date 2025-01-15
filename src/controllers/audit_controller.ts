@@ -17,21 +17,18 @@ class AuditController implements IController {
     }
 
     initializeRoutes(router: Router): void {
-        console.log('Initializing audit routes');
         const auditRoutes = Router();
         auditRoutes.post('/', this.runAudit.bind(this));
-
-        // Attach the grouped router to the main router
         router.use(this.basepath, auditRoutes);
     }
 
     async runAudit(req: Request, res: Response) {
-        console.log(req.body);
         const { url } = req.body;
 
         if (!url) {
             res.status(400).json({ error: 'Missing required parameter: url' });
         }
+        
         try {
             const auditResults = await this.lighthouseService.runAudit(url);
             console.log('auditResults', auditResults);
