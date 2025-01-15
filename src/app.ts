@@ -32,6 +32,8 @@ class App {
         for (const controller of controllers) {
             controller.initializeRoutes(this.router)
         }
+
+        this.app.use(this.router);
     }
 
     public listen(): void {
